@@ -7,11 +7,10 @@ def laberinto (dim,muros):
     coordenada2="j"
     for i in range(dim):
         fila = []
-    for j in range(dim):
-        if tuple([coordenada1, coordenada2]) in muro:
-            fila.append('X')
-        else:
-            fila.append('  ')
-    laberinto.append(fila)
+        for j in range(dim):
+            if tuple([coordenada1, coordenada2]) in muro:
+                fila.append('X')
+            else:
+                fila.append('  ')
+        laberinto.append(fila)
     return laberinto
-
