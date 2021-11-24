@@ -1,6 +1,5 @@
 # El laberinto tiene una dimensión 5x5
 muros = ((0,1), (0,2), (0,3), (0,4), (1,1), (2,1), (2,3), (3,3), (4,0), (4,1), (4,2), (4,3))
-dim=5
 def laberinto (dim,muros):
     laberinto = []
     coordenada1="i"
@@ -8,7 +7,7 @@ def laberinto (dim,muros):
     for i in range(dim):
         fila = []
         for j in range(dim):
-            if tuple([coordenada1, coordenada2]) in muros:
+            if tuple([i, j]) in muros:
                 fila.append('X')
             else:
                 fila.append('  ')
@@ -17,4 +16,5 @@ def laberinto (dim,muros):
 
 dibujolaberinto= laberinto(5,muros)
 
-print(dibujolaberinto)
+for i in dibujolaberinto:
+    print(' '.join(i))
