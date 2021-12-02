@@ -22,3 +22,10 @@ for i in dibujolaberinto:
     print(''.join(i)) #Con esto convierto la lista en una cadena formada por los elementos de la lista separados por comas.
 
 #Parte 2 del código
+
+def solucion_laberinto():
+    n = 5 #Dimensión del laberinto
+    fila = columna = 0 #EMpezamos por el 0,0
+    movimiento= ["Abajo"]
+    while fila < n - 1 and columna < n-1:
+        
