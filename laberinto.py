@@ -44,5 +44,5 @@ def solucion_laberinto():
             movimiento.append("Sin salida")
     return movimiento
 solucion_laberinto()
-print(solucion_laberinto)
+print(f"La solución para escapar del laberinto es la siguiente secuencia de movimientos {solucion_laberinto(dibujolaberinto)}")
 
