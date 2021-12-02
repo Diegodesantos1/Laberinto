@@ -28,7 +28,7 @@ for i in dibujolaberinto:
 #Parte 2 del código
 
 def solucion_laberinto(laberinto):
-    n = 5 #Dimensión del laberinto
+    n = 6 #Dimensión del laberinto
     fila = columna = 0 #Empezamos por el 0,0
     movimiento= ["Abajo"] #Desde la entrada empezamos hacia abajo para llegar a la salida según la imagen
     while (fila < n - 1 and columna < n - 1):
