@@ -28,4 +28,19 @@ def solucion_laberinto():
     fila = columna = 0 #EMpezamos por el 0,0
     movimiento= ["Abajo"]
     while fila < n - 1 and columna < n-1:
-        
+        if movimiento [-1] != "Arriba" and fila + 1 < n:
+            fila += 1
+            movimiento.append ("Abajo")
+        elif movimiento [-1] != "Abajo" and fila - 1 > 0:
+            fila -= 1
+            movimiento.append("Arriba")
+        elif movimiento [-1] != "Derecha" and columna - 1 < 0:
+            columna -= 1
+            movimiento.append("Izquierda")
+        elif movimiento [-1] != "Izquierda" and columna + 1 < n:
+            columna -= 1
+            movimiento.append("Izquierda")
+    return movimiento
+solucion_laberinto()
+print(solucion_laberinto)
+
