@@ -1,7 +1,7 @@
 # El laberinto tiene una dimensión 5x5
 muros = ((0,1), (0,2), (0,3), (0,4), (1,1), (2,1), (2,3), (3,3), (4,0), (4,1), (4,2), (4,3))
-entrada= (0,0)
-salida= (5,5)
+entrada= ((0,0), (0,0)) #Lo pongo en forma de tupla
+salida= ((4,4),(4,4)) #Lo pongo en forma de tupla
 def laberinto (dim,muros):
     laberinto = [] #Creo una lista vacía para las filas
     # coordenada1= i
@@ -11,6 +11,10 @@ def laberinto (dim,muros):
         for j in range(dim):
             if tuple([i,j]) in muros:
                 fila.append("X ") #Dejo 1 espacio para que sea más visual el laberinto
+            elif tuple([i,j]) in entrada:
+                fila.append("E ")
+            elif tuple([i,j]) in salida:
+                fila.append("S ")
             else:
                 fila.append("  ") #Dejo 2 espacios para que sea más visual el laberinto
         laberinto.append(fila)
