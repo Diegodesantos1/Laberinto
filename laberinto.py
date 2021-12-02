@@ -1,4 +1,4 @@
-# El laberinto tiene una dimensión 5x5
+# El laberinto tiene una dimensión 6x6 para dejar más claro el dibujo del laberinto
 muros = ((0,1), (0,2), (0,3), (0,4), (1,1), (2,1), (2,3), (3,3), (4,0), (4,1), (4,2), (4,3),(0,5),(1,5),(2,5),(3,5),(4,5))
 entrada= ((0,0), (0,0)) #Lo pongo en forma de tupla
 salida= ((4,4),(4,4)) #Lo pongo en forma de tupla
@@ -12,15 +12,15 @@ def laberinto (dim,muros):
             if tuple([i,j]) in muros:
                 fila.append("X ") #Dejo 1 espacio para que sea más visual el laberinto
             elif tuple([i,j]) in entrada:
-                fila.append("E ")
+                fila.append("E ") #Añado la entrada
             elif tuple([i,j]) in salida:
-                fila.append("S ")
+                fila.append("S ") #Añado la salida
             else:
                 fila.append("  ") #Dejo 2 espacios para que sea más visual el laberinto
         laberinto.append(fila)
     return laberinto
 
-dibujolaberinto= laberinto(6,muros) #Le pongo 5, ya que es la dimensión del laberinto
+dibujolaberinto= laberinto(6,muros) #Le pongo 6, ya que es la dimensión del laberinto
 
 for i in dibujolaberinto:
     print("".join(i)) #Con esto convierto la lista en una cadena formada por los elementos de la lista separados por comas.
