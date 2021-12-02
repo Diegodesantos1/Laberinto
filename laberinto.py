@@ -40,6 +40,8 @@ def solucion_laberinto():
         elif movimiento [-1] != "Izquierda" and columna + 1 < n:
             columna -= 1
             movimiento.append("Izquierda")
+        else:
+            movimiento.append("Sin salida")
     return movimiento
 solucion_laberinto()
 print(solucion_laberinto)
