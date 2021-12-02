@@ -1,5 +1,5 @@
 # El laberinto tiene una dimensión 5x5
-muros = ((0,1), (0,2), (0,3), (0,4), (1,1), (2,1), (2,3), (3,3), (4,0), (4,1), (4,2), (4,3))
+muros = ((0,1), (0,2), (0,3), (0,4), (1,1), (2,1), (2,3), (3,3), (4,0), (4,1), (4,2), (4,3),(0,5),(1,5),(2,5),(3,5),(4,5))
 entrada= ((0,0), (0,0)) #Lo pongo en forma de tupla
 salida= ((4,4),(4,4)) #Lo pongo en forma de tupla
 def laberinto (dim,muros):
@@ -20,7 +20,7 @@ def laberinto (dim,muros):
         laberinto.append(fila)
     return laberinto
 
-dibujolaberinto= laberinto(5,muros) #Le pongo 5, ya que es la dimensión del laberinto
+dibujolaberinto= laberinto(6,muros) #Le pongo 5, ya que es la dimensión del laberinto
 
 for i in dibujolaberinto:
     print("".join(i)) #Con esto convierto la lista en una cadena formada por los elementos de la lista separados por comas.
@@ -31,7 +31,7 @@ def solucion_laberinto(laberinto):
     n = 5 #Dimensión del laberinto
     fila = columna = 0 #Empezamos por el 0,0
     movimiento= ["Abajo"] #Desde la entrada empezamos hacia abajo para llegar a la salida según la imagen
-    while (fila < n - 1 and columna < n-1):
+    while (fila < n - 1 and columna < n - 1):
         if movimiento[-1] != "Arriba" and fila + 1 < n and laberinto[fila + 1][columna] != "X ": #Especifico que haga esto cuando no haya muro
             fila += 1
             movimiento.append ("Abajo")
