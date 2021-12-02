@@ -3,16 +3,12 @@ muros = ((0,1), (0,2), (0,3), (0,4), (1,1), (2,1), (2,3), (3,3), (4,0), (4,1), (
 entrada= (0,0)
 salida= (5,5)
 def laberinto (dim,muros):
-    laberinto = []
+    laberinto = [] #Creo una lista vacía para las filas
     # coordenada1= i
     # coordenada2= j
     for i in range(dim):
-        fila = []
+        fila = [] #Creo una lista vacía para las filas
         for j in range(dim):
-            if tuple ([i,j]) in entrada:
-                fila.append('E')
-            if tuple([i,j]) in salida:
-                fila.append('S')
             if tuple([i,j]) in muros:
                 fila.append('X')
             else:
@@ -20,7 +16,9 @@ def laberinto (dim,muros):
         laberinto.append(fila)
     return laberinto
 
-dibujolaberinto= laberinto(5,muros)
+dibujolaberinto= laberinto(5,muros) #Le pongo 5, ya que es la dimensión del laberinto
 
 for i in dibujolaberinto:
-    print(''.join(i))
+    print(''.join(i)) #Con esto convierto la lista en una cadena formada por los elementos de la lista separados por comas.
+
+#Parte 2 del código
