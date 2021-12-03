@@ -1,16 +1,34 @@
-# Laberinto
-
-Esta es la dirección del [Repositorio](https://github.com/Diegodesantos1/Laberinto)
-
-
-He creado un programa en cual es capaz de printear una lista asignando en coordenadas de matrices "X " sea muro y "  " y espacio en dónde no hay muros. Recreando así el laberinto que indicaba la figura (Todo esto ampliado en el milestone 1). En la segunda parte del código (Todo esto ampliado en el milestone parte 2) tenía que crear el método para escapar del laberinto y sacar por pantalla las direcciones que realizaba para escapar.
-
-
-El diagrama de flujo es el siguiente:
+## Laberinto
+1. [Introducción](#Introducción)
+2. [Flowchart](#Flowchart)
+3. [Milestones](#Milestones)
+4. [Código](#Código)
+***
 
 
+<h1 align="center">1.Introducción</h1>
 
-El código empleado para resolverlo es el siguiente:
+<B>Este es el link del [Repositorio](https://github.com/Diegodesantos1/Laberinto)</B>
+
+*He creado un programa en cual es capaz de printear una lista asignando en coordenadas de matrices "X " sea muro y "  " y espacio en dónde no hay muros. Recreando así el laberinto que indicaba la figura (Todo esto ampliado en el milestone 1). En la segunda parte del código (Todo esto ampliado en el milestone parte 2) tenía que crear el método para escapar del laberinto y sacar por pantalla las direcciones que realizaba para escapar.*
+***
+
+<h1 align="center">2.Diagrama de flujo</h1>
+
+<center>
+	 <img src="https://github.com/Diegodesantos1/Laberinto/blob/main/Laberinto%20Flowchart.png" alt="Flowchart">
+</center>
+
+*Para verlo más claro pincha [aquí](https://github.com/Diegodesantos1/Laberinto/blob/main/Laberinto%20Flowchart.png)*
+***
+<h1 align="center">3.Milestones</h1>
+
+•  [1ºMilestone](https://github.com/Diegodesantos1/Laberinto/milestone/2)
+
+•  [2ºMilestone](https://github.com/Diegodesantos1/Laberinto/milestone/1)
+***
+<h1 align="center">4.Código</h1>
+
 ```python
 # El laberinto tiene una dimensión 6x6 para dejar más claro el dibujo del laberinto
 muros = ((0, 1), (0, 2), (0, 3), (0, 4), (1, 1), (2, 1), (2, 3), (3, 3),(4, 0), (4, 1), (4, 2), (4, 3), (0, 5), (1, 5), (2, 5), (3, 5), (4, 5))
